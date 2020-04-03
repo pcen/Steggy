@@ -1,3 +1,5 @@
+# encodes values to a base-4 representation
+
 # convert string to a list representing bits
 def encode_binary(string):
     binary = []

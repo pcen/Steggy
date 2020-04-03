@@ -1,7 +1,7 @@
 from PIL import Image
 from random import randint
 
-import base4
+from Steggy.utils import base4
 
 # load an image and return a copy
 def load_image(filename):
@@ -39,7 +39,7 @@ def encode_image(data, image):
 
     if isinstance(image, str):
         image = load_image(image)
-    
+
     width = image.size[0]
     x, y = 0, 0
     for encoded_pixel in encode_pixels(data, image):
@@ -74,7 +74,7 @@ def spread_modulo(index, pixel_pair):
 # encode a 4 digit base 4 word in 2 pixels and yield each pixel as a tuple
 def encode_pixels(data, image):
     image = iter(image.getdata())
-    
+
     for i in range(len(data)):
         p_pair = next_pixel_pair(image)
 
@@ -82,7 +82,7 @@ def encode_pixels(data, image):
             if j < 4:
                 encode = data[i][j]
                 current = p_pair[j] % 10
-            
+
                 if current < 5:
                     p_pair[j] -= (current - encode)
                 else:

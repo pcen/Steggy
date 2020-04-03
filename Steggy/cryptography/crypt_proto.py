@@ -1,5 +1,5 @@
-from RSA import RSAService
-from AES import AESService
+from Steggy.cryptography.RSA import RSAService
+from Steggy.cryptography.AES import AESService
 
 # encryption service enforcing encryption of AES symmetric key with RSA
 class CryptoService:

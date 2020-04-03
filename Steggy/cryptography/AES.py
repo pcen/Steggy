@@ -16,7 +16,7 @@ def PKCS7_depad(plain_bytes):
 
 # abstraction of AES CBC encryption
 class AESService:
-    
+
     len_iv = AES.block_size
 
     def __init__(self, key = None):

@@ -1,4 +1,4 @@
-from image_tools import encode_image, decode_image, save_image
+from Steggy.core.image_tools import encode_image, decode_image, save_image
 
 # simple demonstration of encoding a string in an image file
 # > python3 demo.py
